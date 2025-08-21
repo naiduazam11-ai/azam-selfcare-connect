@@ -85,16 +85,16 @@ export function Header({ user }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full bg-gradient-secondary backdrop-blur-md border-b border-border/50 shadow-lg">
       {/* Main Header Row */}
       <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="h-8 sm:h-9 md:h-10 flex items-center justify-between">
+        <div className="h-16 sm:h-18 md:h-20 flex items-center justify-between">
           {/* Logo & Branding */}
           <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6 min-w-0">
             <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
               <div className="p-1.5 sm:p-2 bg-white rounded-lg sm:rounded-xl shadow-sm flex-shrink-0">
-                 <img 
-                   src={azamLogo} 
-                   alt="Azam TV" 
-                   className="h-3 w-auto sm:h-4 md:h-5"
-                 />
+                <img 
+                  src={azamLogo} 
+                  alt="Azam TV" 
+                  className="h-6 w-auto sm:h-8 md:h-10"
+                />
               </div>
               <div className="hidden sm:block min-w-0">
                 <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground bg-gradient-primary bg-clip-text text-transparent truncate">
@@ -210,9 +210,9 @@ export function Header({ user }: HeaderProps) {
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative h-5 sm:h-6 w-auto px-1 sm:px-2 rounded-full hover:bg-primary/10">
+                  <Button variant="ghost" className="relative h-10 sm:h-12 w-auto px-2 sm:px-3 rounded-full hover:bg-primary/10">
                     <div className="flex items-center space-x-2 sm:space-x-3">
-                      <Avatar className="h-4 w-4 sm:h-5 sm:w-5 border-2 border-primary/20">
+                      <Avatar className="h-8 w-8 sm:h-10 sm:w-10 border-2 border-primary/20">
                         <AvatarImage src={user.avatar} alt={user.name} />
                         <AvatarFallback className="bg-primary text-primary-foreground font-bold text-xs sm:text-sm">
                           {user.name.split(' ').map(n => n[0]).join('')}

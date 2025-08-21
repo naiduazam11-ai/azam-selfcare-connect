@@ -1,11 +1,17 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
+import { LoginForm } from "@/components/auth/LoginForm";
 import { AccountOverview } from "@/components/dashboard/AccountOverview";
 import { PaymentSection } from "@/components/payment/PaymentSection";
 import { ServiceRequestForm } from "@/components/service/ServiceRequestForm";
-import { LoginForm } from "@/components/auth/LoginForm";
-import { Routes, Route } from "react-router-dom";
+import { PlanChangeSection } from "@/components/plans/PlanChangeSection";
+import { KnowledgeBaseSection } from "@/components/knowledge/KnowledgeBaseSection";
+import { RetrackSection } from "@/components/retrack/RetrackSection";
+import { LedgerSection } from "@/components/ledger/LedgerSection";
+import { AddSubscriptionSection } from "@/components/subscription/AddSubscriptionSection";
+import { PromoOffersSection } from "@/components/offers/PromoOffersSection";
 
 export default function Dashboard() {
   const [user, setUser] = useState<any>(null);
@@ -29,12 +35,12 @@ export default function Dashboard() {
             <Route path="/account" element={<AccountOverview />} />
             <Route path="/payment" element={<PaymentSection />} />
             <Route path="/service-request" element={<ServiceRequestForm />} />
-            <Route path="/plans" element={<div>Plan Change - Coming Soon</div>} />
-            <Route path="/knowledge-base" element={<div>Knowledge Base - Coming Soon</div>} />
-            <Route path="/retrack" element={<div>Retrack - Coming Soon</div>} />
-            <Route path="/ledger" element={<div>Ledger - Coming Soon</div>} />
-            <Route path="/add-subscription" element={<div>Add Subscription - Coming Soon</div>} />
-            <Route path="/offers" element={<div>Promo Offers - Coming Soon</div>} />
+            <Route path="/plans" element={<PlanChangeSection />} />
+            <Route path="/knowledge-base" element={<KnowledgeBaseSection />} />
+            <Route path="/retrack" element={<RetrackSection />} />
+            <Route path="/ledger" element={<LedgerSection />} />
+            <Route path="/add-subscription" element={<AddSubscriptionSection />} />
+            <Route path="/offers" element={<PromoOffersSection />} />
           </Routes>
         </main>
       </div>
